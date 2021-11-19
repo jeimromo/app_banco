@@ -1,5 +1,0 @@
-streamlit
-numpy
-pandas
-joblib
-scikit-learn=0.24.1
