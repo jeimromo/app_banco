@@ -1,14 +1,12 @@
 import streamlit as st
-from PIL import Image
 import numpy as np
 import pandas as pd
 import sklearn
 import joblib
 
 #------------PRESENTACION-------------
+st.image('imagenes/logo1.JPG')
 c1 =st.container()
-imagen = Image.open('imagenes/logo1.JPG')
-c1.image(imagen)
 c1.title("Aprobación crédito Bancario")
 c1.write("<h5 style='text-align: justify; color:rgb(21, 114, 67);'> Queremos hacer tu vida más fácil, por eso \
     hemos utilizado lo mejor de la tecnología para que  \
@@ -44,8 +42,6 @@ with bar:
     for i in range(len(atributos)):
         x_usuario[i] = st.number_input(atributos[i])
 
-
-
 #-------RESULTADOS DEL MODELO---------------
 c2 = st.container()
  
@@ -68,12 +64,11 @@ resultado= st.button("🚀 consultar ahora", key=None, on_click=None, args=None,
 if resultado:
 
     if y_pred == 0:
-        st.write("Lo sentimos su crédito no fue aprobado 😔</h3>",unsafe_allow_html=True)
-        im = Image.open("imagenes/rechazado.png")
-        st.image(im)
+        st.write("Lo sentimos tu crédito no fue aprobado 😔, contacta con uno de nuestros agentes \
+            y prepara todo lo necesario para una próxima oportunidad</h3>",unsafe_allow_html=True)
+        st.image("imagenes/rechazado.png")
     if y_pred == 1:
         st.write("Felicidades su crédito fue aprobado 🥳")
-        im = Image.open("imagenes/aprobado.png")
-        st.image(im)
+        st.image("imagenes/aprobado.png")
 
 #-----------------
