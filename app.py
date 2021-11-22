@@ -5,7 +5,7 @@ import sklearn
 import joblib
 
 #------------PRESENTACION-------------
-st.image('imagenes/logo1.JPG')
+st.image('imagenes/logo1.jpg')
 c1 =st.container()
 c1.title("Aprobación crédito Bancario")
 c1.write("<h5 style='text-align: justify; color:rgb(21, 114, 67);'> Queremos hacer tu vida más fácil, por eso \
