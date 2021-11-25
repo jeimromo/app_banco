@@ -44,7 +44,10 @@ with bar:
 #--Ingreso de los datos   
     x_usuario = np.zeros(len(atributos))
     for i in range(len(atributos)):
-        x_usuario[i] = st.number_input(atributos[i])
+        if i==1 or i==2 or i==7:
+            x_usuario[i] = st.number_input(atributos[i], min_value = 0)
+        else:
+            x_usuario[i] = st.number_input(atributos[i], min_value = 0, step=1)
 
 #-------RESULTADOS DEL MODELO---------------
 c2 = st.container()
