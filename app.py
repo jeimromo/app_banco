@@ -45,7 +45,7 @@ with bar:
     x_usuario = np.zeros(len(atributos))
     for i in range(len(atributos)):
         if i==1 or i==2 or i==7:
-            x_usuario[i] = st.number_input(atributos[i], min_value = 0)
+            x_usuario[i] = st.number_input(atributos[i], min_value = 0.00)
         else:
             x_usuario[i] = st.number_input(atributos[i], min_value = 0, step=1)
 
